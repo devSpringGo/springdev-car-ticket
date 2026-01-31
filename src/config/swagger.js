@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000",
+        url: "https://springdev-car-ticket.onrender.com",
         description: "Local server"
       }
     ],
