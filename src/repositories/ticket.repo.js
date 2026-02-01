@@ -10,7 +10,7 @@ exports.GetTicketByPhone = async (phone) => {
     .query(`
       Select B.BookingId, A.FullName, A.Phone, A.Email, K.SeatNumber, B.Status
       , F.LocationName as [From], G.LocationName as [To]
-      , B.BookingDate, I.CompanyName, I.Description
+      , D.DepartureTime BookingDate, I.CompanyName, I.Description
       , Sum(C.Price) [Sum]
       from Users A
       inner join Bookings B on A.UserId = B.UserId
@@ -25,7 +25,7 @@ exports.GetTicketByPhone = async (phone) => {
       WHERE A.Phone = @phone
       Group by A.FullName, A.Phone, A.Email, K.SeatNumber
       , F.LocationName, G.LocationName
-      , B.BookingDate, H.BusId, I.CompanyName, I.Description
+      , D.DepartureTime, H.BusId, I.CompanyName, I.Description
       , C.Price, B.Status, B.BookingId
     `);
 
