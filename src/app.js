@@ -6,8 +6,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./config/swagger");
 //swagger end
 const app = express();
-//app.use(cors({ origin: "https://springdev-car-ticket.onrender.com/" }));
-app.use(cors({ origin: "http://localhost:5000/" }));
+app.use(cors({ origin: "https://springdev-car-ticket.onrender.com/" }));
+//app.use(cors({ origin: "http://localhost:5000/" }));
 
 app.use(express.json());
 //swagger
