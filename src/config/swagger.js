@@ -11,8 +11,8 @@ const options = {
     servers: [
       {
         url: "https://springdev-car-ticket.onrender.com",
-        url1: "http://localhost:5000",
-        description: "Local server"
+        //url1: "http://localhost:5000",
+        description: "Main Server"
       }
     ],
     components: {
