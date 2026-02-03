@@ -16,6 +16,7 @@ app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/api/bookings", require("./routes/booking.routes"));
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/ticket", require("./routes/ticket.routes"));
+app.use("/api/trip", require("./routes/trip.routes"));
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
